@@ -1,2 +1,2 @@
-# project1
-first project practice
+#Web Technologies project 1 
+#Sample Travel Agency 
