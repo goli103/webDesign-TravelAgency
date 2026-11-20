@@ -1,0 +1,79 @@
+<!-- by Golnaz Rastegarpanah 222579809 
+Assignment 1 - ITEC 3020 - Web Technologies - York University - Fall 2026 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelita - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: same on every page -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo-icon.svg" alt="" width="40" height="40">
+      <span class="logo-text">Travel<span>ita</span><small>Making your journey easy</small></span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="about.html">About &amp; Contact</a>
+    </nav>
+  </header>
+
+  <!-- home-banner: big background picture with the title, tagline and a search box -->
+  <section class="home-banner">
+    <h1>Welcome to <span class="brand-word">Travelita</span></h1>
+    <p class="tagline">Easy, hand-planned trips to beaches, mountains and cities around the world</p>
+
+    <!-- This form opens destinations.html and sends what the user typed -->
+    <form class="search-box" action="destinations.html" method="get">
+      <input type="text" name="search" placeholder="Enter a country or city here...">
+      <button type="submit">SEARCH</button>
+    </form>
+  </section>
+
+  <!-- FEATURED AREA: three highlighted trips -->
+  <section class="content">
+    <h2>Featured trips</h2>
+    <div class="cards">
+
+      <article class="card">
+        <div class="image-box">
+          <img src="images/santorini1.jpg" alt="White houses by the sea in Santorini">
+        </div>
+        <h3>Santorini Sunset Escape</h3>
+        <p>Greece - 7 days - $1,899</p>
+        <p>Cliffside villages and amazing sunsets.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="images/maldives3.jpg" alt="">
+        </div>
+        <h3>Maldives Island Retreat</h3>
+        <p>Maldives - 8days - $2,799</p>
+        <p>Overwater bungalows and crystal-clear waters</p>
+      </article>
+
+      <article class="card">
+        <div class="image-box">
+          <img src="images/banff1.jpg" alt="Mountains and a lake in Banff">
+        </div>
+        <h3>Banff Alpine Adventure</h3>
+        <p>Canada - 6 days - $1,499</p>
+        <p>Hiking and glacier lakes in the Rockies.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Travelita. A new brand in the travel industry. All rights reserved for ITEC 3020-Web Technologies-York University.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+/* ===== Travelita - style.css ===== */
+/* by Golnaz Rastegarpanah 222579809 
+Assignment 1 - ITEC 3020 - Web Technologies - York University - Fall 2026 */
+
+/* ---- 1. General page settings ---- */
+* {
+  box-sizing: border-box;
+  /* padding does not make elements wider than 100% */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222222;
+  background: linear-gradient(to right, hwb(191 72% 2%), hsl(191, 79%, 35%));
+}
+
+h1,
+h2,
+h3 {
+  color: #0f4c5c;
+
+}
+
+img {
+  max-width: 100%;
+  /* images never overflow their container */
+  height: auto;
+}
+
+/* ---- 2. Header and navigation ---- */
+header {
+  background-color: #0f4c5c;
+  padding: 15px 30px;
+  display: flex;
+  /* puts logo and menu side by side */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  /* icon and text side by side */
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.logo-text span {
+  color: #ffb57a;
+  /* "ita" in orange */
+}
+
+.logo-text small {
+  display: block;
+  /* tagline on its own line */
+  font-size: 0.7rem;
+  font-weight: normal;
+  color: #d8e6ea;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  /* bigger menu text */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---- 3. Page sections ---- */
+.home-banner {
+  background-image: url("images/home-banner1.jpg");
+  background-size: cover;
+  /* picture always fills the whole section */
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px 180px;
+  /* extra space at the bottom shows the mountains */
+}
+
+.home-banner h1 {
+  color: white;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 0 10px;
+}
+
+/* Only the word "Travelita" in the home title zooms on hover */
+.brand-word {
+  display: inline-block;
+  /* needed: inline elements cannot be zoomed */
+  transition: transform 0.3s;
+  color: hwb(52 4% 0%);
+  font-family: 'Georgia', serif;
+
+}
+
+.brand-word:hover {
+  transform: scale(1.15);
+}
+
+.tagline {
+  font-size: 1.3rem;
+  margin: 0 0 40px;
+  font-style: oblique;
+}
+
+.search-box {
+  display: flex;
+  /* input and button side by side */
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* see-through white box */
+  border-radius: 6px;
+}
+
+.search-box input {
+  flex: 1;
+  /* the input takes all the free space */
+  min-width: 0;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  /* centers the section */
+  padding: 30px 20px;
+}
+
+/* ---- 4. Cards ---- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* cards move to the next row when there is no space */
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 280px;
+  /* each card is at least 280px wide */
+  max-width: 320px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Picture frame: the picture starts zoomed in and zooms out on hover */
+.image-box {
+  overflow: hidden;
+  /* hides the parts of the picture outside the frame */
+  border-radius: 4px;
+}
+
+.image-box img {
+  display: block;
+  transform: scale(1.15);
+  /* starts zoomed in */
+  transition: transform 0.4s;
+  /* smooth change */
+}
+
+.image-box:hover img {
+  transform: scale(1);
+  /* zooms out to normal size on hover */
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card button {
+  margin-top: 10px;
+}
+
+/* ---- 5. Buttons, search bar and forms ---- */
+button {
+  background-color: #e36414;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button.saved {
+  background-color: #0f4c5c;
+  /* a saved trip turns blue */
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
+
+#contact-form {
+  max-width: 500px;
+}
+
+#contact-form label {
+  display: block;
+  margin-top: 12px;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+  width: 100%;
+}
+
+#contact-form button {
+  margin-top: 15px;
+}
+
+/* messages from JavaScript */
+.error {
+  color: #b00020;
+}
+
+.success {
+  color: #1b7a43;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---- 6. Footer ---- */
+footer {
+  background-color: #0f4c5c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.about-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+  font-style: oblique;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat {
+  flex: 1 1 150px;
+  background: linear-gradient(135deg, #0f4c5c, #1b7f8e);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 8px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 2rem;
+  color: #ffb57a;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-box {
+  flex: 1 1 300px;
+  background-color: white;
+  padding: 20px;
+  border-top: 5px solid #e36414;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+}
+
+.about-box:hover {
+  background-color: #fff0dc;
+  /* lighter colour on hover */
+}
+
+.about-box.highlight:hover {
+  background-color: #1b7f8e;
+  /* lighter teal for the dark franchise box */
+}
+
+.about-box h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.about-box.highlight {
+  background-color: #0f4c5c;
+  color: white;
+  border-top-color: #ffb57a;
+}
+
+.about-box.highlight h2 {
+  color: #ffb57a;
+}
+
+.about-link {
+  color: #ffb57a;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 0;
+}
+
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  /* on phones the picture moves below the form */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.contact-form-area {
+  flex: 1 1 320px;
+  max-width: 500px;
+}
+
+.photo-placeholder {
+  flex: 1 1 300px;
+  /* the picture uses the free space on the right */
+  margin: 0;
+  text-align: center;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.photo-placeholder figcaption {
+  margin-top: 8px;
+  color: #5b6a72;
+  font-size: 0.95rem;
+}
+
+/* ---- 7. Responsive design: small screens (phones) ---- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    /* logo above the menu */
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 1.1rem;
+  }
+
+  .card {
+    max-width: none;
+    /* cards using the full width */
+  }
+
+  .home-banner {
+    padding: 50px 15px 120px;
+  }
+
+  .home-banner h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+    /* input above the button */
+  }
+}

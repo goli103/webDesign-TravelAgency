@@ -1,0 +1,175 @@
+<!-- by Golnaz Rastegarpanah 222579809 
+Assignment 1 - ITEC 3020 - Web Technologies - York University - Fall 2026 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelita - Destinations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo-icon.svg" alt="" width="40" height="40">
+      <span class="logo-text">Travel<span>ita</span><small>Making your journey easy</small></span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="about.html">About &amp; Contact</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h1>Destinations</h1>
+
+    <!-- SEARCH AND FILTER CONTROLS (used by script.js) -->
+    <div class="filter-bar">
+      <label for="search">Search:</label>
+      <input type="text" id="search" placeholder="Type a name or country">
+
+      <label for="category">Category:</label>
+      <select id="category">
+        <option value="All">All</option>
+        <option value="Beach">Beach</option>
+        <option value="Mountain">Mountain</option>
+        <option value="City">City</option>
+        <option value="Culture">Culture</option>
+      </select>
+    </div>
+
+    <!-- Favourites counter (updated by script.js) -->
+    <p>Saved trips: <strong id="saved-count">0</strong></p>
+
+    <!-- THE TRIP CARDS. Each card has a data-category so JavaScript can filter it. -->
+    <div class="cards">
+
+      <article class="card" data-category="Beach">
+        <div class="image-box">
+          <img src="images/santorini1.jpg" alt="White houses by the sea in Santorini">
+        </div>
+        <h3>Santorini Sunset Escape</h3>
+        <p class="info">Greece - Beach</p>
+        <p>Duration: 7 days</p>
+        <p>Price: $1,899</p>
+        <p>Rating: 4.8 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+
+      <article class="card" data-category="Beach">
+        <div class="image-box">
+          <img src="images/maldives3.jpg" alt="Bungalows over the water in the Maldives">
+        </div>
+        <h3>Maldives Island Retreat</h3>
+        <p class="info">Maldives - Beach</p>
+        <p>Duration: 8 days</p>
+        <p>Price: $3,299</p>
+        <p>Rating: 4.7 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+
+      <article class="card" data-category="Mountain">
+        <div class="image-box">
+          <img src="images/banff1.jpg" alt="Mountains and a lake in Banff">
+        </div>
+        <h3>Banff Alpine Adventure</h3>
+        <p class="info">Canada - Mountain</p>
+        <p>Duration: 6 days</p>
+        <p>Price: $1,499</p>
+        <p>Rating: 4.9 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+
+      <article class="card" data-category="Mountain">
+        <div class="image-box">
+          <img src="images/swiss1.jpg" alt="A red train in the Swiss Alps">
+        </div>
+        <h3>Swiss Alps Tour</h3>
+        <p class="info">Switzerland - Mountain</p>
+        <p>Duration: 8 days</p>
+        <p>Price: $2,999</p>
+        <p>Rating: 4.8 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+      <article class="card" data-category="City">
+        <div class="image-box">
+          <img src="images/chicago1.jpg" alt="Chicago skyline with tall towers and the river">
+        </div>
+        <h3>Chicago Skyline Getaway</h3>
+        <p class="info">USA - City</p>
+        <p>Duration: 4 days</p>
+        <p>Price: $1,049</p>
+        <p>Rating: 4.6 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+
+
+      <article class="card" data-category="Culture">
+        <div class="image-box">
+          <img src="images/Dubai-UAE1.jpg" alt="Family riding camels on a sandy beach by the sea">
+       </div>
+        <h3>Dubai Skyline & Desert Safari</h3>
+        <p class="info">UAE - City-Culture</p>
+        <p>Duration: 5 days</p>
+        <p>Price: $2,799</p>
+        <p>Rating: 4.7 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+
+      <article class="card" data-category="City">
+        <div class="image-box">
+          <img src="images/paris1.jpg" alt="Colourful buildings along the Seine in Paris">
+        </div>
+        <h3>Paris City Break</h3>
+        <p class="info">France - City</p>
+        <p>Duration: 5 days</p>
+        <p>Price: $1,199</p>
+        <p>Rating: 4.6 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+
+
+      <article class="card" data-category="City">
+        <div class="image-box">
+          <img src="images/venice1.jpg"" alt=" Colourful buildings along a canal in Venice">
+        </div>
+        <h3>Venice Canal Escape</h3>
+        <p class="info">Italy - City</p>
+        <p>Duration: 5 days</p>
+        <p>Price: $1,599</p>
+        <p>Rating: 4.7 / 5</p>
+        <button class="save-button">Save</button>
+      </article>
+
+      <article class="card" data-category="City">
+        <div class="image-box">
+          <img src="images/toronto.jpg" alt="Toronto skyline with the CN Tower at dusk">
+        </div>
+        <h3>Toronto City Weekend</h3>
+        <p class="info">Canada - City</p>
+        <p>Duration: 4 days</p>
+        <p>Price: $899</p>
+        <p>Rating: 4.5 / 5</p>
+        <button class="save-button">Save</button>
+
+      </article>
+
+    </div>
+
+    <!-- Shown by JavaScript when no card matches -->
+    <p id="no-results" class="hidden">No trips found. Try a different search.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Travelita. A new brand in the travel industry. All rights reserved for ITEC 3020-Web
+      Technologies-York University.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

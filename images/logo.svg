@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" width="360" height="90" role="img" aria-label="Travelita - Making your journey easy">
+  <circle cx="45" cy="45" r="38" fill="#e36414"/>
+  <path d="M17 62 Q 29 48 40 55" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7" opacity="0.9"/>
+  <polygon points="29,44 66,19 53,63 42,51" fill="#ffffff"/>
+  <polygon points="29,44 42,51 39,60" fill="#ffd9bf"/>
+  <line x1="42" y1="51" x2="66" y2="19" stroke="#e36414" stroke-width="2"/>
+  <text x="100" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="bold" fill="#0f4c5c">Travel<tspan fill="#e36414">ita</tspan></text>
+  <text x="102" y="74" font-family="Arial, sans-serif" font-size="15" letter-spacing="1" fill="#5b6a72">Making your journey easy</text>
+</svg>

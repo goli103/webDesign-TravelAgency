@@ -1,0 +1,113 @@
+<!-- by Golnaz Rastegarpanah 222579809 
+Assignment 1 - ITEC 3020 - Web Technologies - York University - Fall 2026 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelita - About &amp; Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo-icon.svg" alt="" width="40" height="40">
+      <span class="logo-text">Travel<span>ita</span><small>Making your journey easy</small></span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="about.html">About &amp; Contact</a>
+    </nav>
+  </header>
+
+  <!-- ABOUT SECTION -->
+ <section class="content">
+    <div class="about-intro">
+      <h1>About Us</h1>
+      <p>Travelita is a new travel brand with one goal: to make your journey easy.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><strong>9</strong> trips</div>
+      <div class="stat"><strong>8</strong> countries</div>
+      <div class="stat"><strong>2,000+</strong> travellers</div>
+      <div class="stat"><strong>4.7</strong> average rating</div>
+    </div>
+
+    <div class="about-grid">
+       
+      <div class="about-box">
+        <h2>Who we are</h2>
+        <p>A Toronto-based team of travel lovers. Every advisor has visited the places they sell.</p>
+      </div>
+      <div class="about-box">
+        <h2>Our goal</h2>
+        <p>Simple planning, honest prices and small groups, so every traveller feels looked after.</p>
+      </div>
+      <div class="about-box">
+        <h2>What we have done</h2>
+        <p>Launched our first nine trips with local guides and family-run hotels at every destination.</p>
+      </div>
+      <div class="about-box highlight">
+        <h2>Our franchise</h2>
+        <p>Open your own Travelita agency with our brand, ready-made trips and full training.</p>
+        <a class="about-link" href="#contact">Ask about franchising</a>
+      </div>
+    </div>
+  </section>
+
+   <!-- CONTACT FORM SECTION -->
+  <section class="content" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: hello@travelita-example.com | Phone: (555) 010-2030</p>
+
+    <div class="contact-layout">
+
+      <!-- LEFT SIDE: the form -->
+      <div class="contact-form-area">
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name">
+
+          <label for="email">Email:</label>
+          <input type="text" id="email">
+
+          <label for="destination">Destination:</label>
+          <select id="destination">
+            <option>Santorini Sunset Escape</option>
+            <option>Maldives Island Retreat</option>
+            <option>Banff Alpine Adventure</option>
+            <option>Swiss Alps  Tour</option>
+            <option>Dubai Skyline &amp; Desert Safari</option>
+            <option>Paris City Break</option>
+            <option>Venice Canal Escape</option>
+            <option>Toronto City Weekend</option>
+            <option>Chicago Skyline Getaway</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" rows="4"></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+
+        <!-- JavaScript writes the success or error message here -->
+        <p id="form-message"></p>
+      </div>
+
+      <!--on the  right: the picture placeholder -->
+      <figure class="photo-placeholder">
+        <img src="images/travelita-tours.jpg" alt="Placeholder for the Travelita team photo">
+        <figcaption>Our team photo ( More photos coming soon)</figcaption>
+      </figure>
+
+    </div>
+  </section>
+ <footer>
+    <p>&copy; 2026 Travelita. A new brand in the travel industry. All rights reserved for ITEC 3020-Web Technologies-York University.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
