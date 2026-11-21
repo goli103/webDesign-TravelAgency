@@ -1,6 +1,6 @@
 #website : Travelita  agency - Assignment 1- web Technologies- ITEC 3020
 
-subject :                         Assignment1-  ITEC 3020- Web Technologies- Travel Agency website
+subject : Web Technologies- Travel Agency website
 
 ## Selected website theme
 
