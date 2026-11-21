@@ -1,7 +1,7 @@
 // ===== Travelita - script.js =====
 // This file contains the JavaScript code for the Travelita website.
 // Each part first checks that its elements exist on the current page.
-// Golnaz Rastegarpanah - 222579809- Assignmnet 1 - ITEC 3020 - Web 
+// Golnaz   - ITEC 3020 - Web 
 // Technologies - York University - Fall 2026
 
 
